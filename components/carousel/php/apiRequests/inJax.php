@@ -1,5 +1,40 @@
 <?php
 
+	// //require hidden variables
+	// require_once("../../../../vendor/autoload.php");
+	// //require_once realpath(__DIR__ . "../../../../vendor/autoload.php");
+
+	// use Dotenv\Dotenv;
+
+	// $dotenv = Dotenv::createImmutable(__DIR__);
+	// $dotenv->load();
+
+	// $bearerToken = getenv("YELP_BEARER_TOKEN");
+
+	// echo $bearerToken;
+
+	// require_once realpath("../../../../vendor/autoload.php");
+
+	// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+	// $dotenv->safeLoad();
+
+	// echo $_ENV["YELP_BEARER_TOKEN"];
+
+
+
+	//
+	require_once realpath("../../../../.env");
+	require_once realpath("../../../../vendor/autoload.php");
+
+	$dotenv = Dotenv\Dotenv::createImmutable("../../../../vendor/autoload.php");
+	$dotenv->safeLoad();
+
+// DONT ECHO THE ENV VARIABLE, JUST REPLACE THE BEARER TOKEN WITH THE VARIABLE
+	$bearerToken = getenv("YELP_BEARER_TOKEN");
+
+//
+
+
 
  $curl = curl_init();
 
@@ -12,7 +47,7 @@
  	CURLOPT_TIMEOUT => 30,
  	CURLOPT_HTTPHEADER => [
  		"content-type: application/x-www-form-urlencoded",
- 		"Authorization: Bearer WWORhxdC48K1oVcYBtxSNXXuMelV6t3TMGk70q3AFVBlV9C3a7xPYQl5kPTTaPO5pXhMvDDS0HX92GDzOqgyeh4rFKM0f7Xum7zeMOOWOEbGW6H1Ciexm0A74fOvYHYx"
+ 		"Authorization: $bearerToken"
  	],
  ]);
 
