@@ -1,38 +1,14 @@
 <?php
 
-	// //require hidden variables
-	// require_once("../../../../vendor/autoload.php");
-	// //require_once realpath(__DIR__ . "../../../../vendor/autoload.php");
+	//require_once(__DIR__ . "../../../../vendor/autoload.php");
 
-	// use Dotenv\Dotenv;
+	require_once("/Applications/XAMPP/xamppfiles/htdocs/yelp/vendor/autoload.php");
 
-	// $dotenv = Dotenv::createImmutable(__DIR__);
-	// $dotenv->load();
-
-	// $bearerToken = getenv("YELP_BEARER_TOKEN");
-
-	// echo $bearerToken;
-
-	// require_once realpath("../../../../vendor/autoload.php");
-
-	// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-	// $dotenv->safeLoad();
-
-	// echo $_ENV["YELP_BEARER_TOKEN"];
-
-
-
-	//
-	require_once realpath("../../../../.env");
-	require_once realpath("../../../../vendor/autoload.php");
-
-	$dotenv = Dotenv\Dotenv::createImmutable("../../../../vendor/autoload.php");
-	$dotenv->safeLoad();
-
-// DONT ECHO THE ENV VARIABLE, JUST REPLACE THE BEARER TOKEN WITH THE VARIABLE
-	$bearerToken = getenv("YELP_BEARER_TOKEN");
-
-//
+	 //require_once("../../../../vendor/autoload.php");
+	
+	 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+	 $dotenv->load();
+	 
 
 
 
@@ -47,7 +23,7 @@
  	CURLOPT_TIMEOUT => 30,
  	CURLOPT_HTTPHEADER => [
  		"content-type: application/x-www-form-urlencoded",
- 		"Authorization: $bearerToken"
+ 		"Authorization: $_ENV[API_KEY]"
  	],
  ]);
 

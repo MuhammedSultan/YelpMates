@@ -1,12 +1,5 @@
 <?php 
-    session_start();
-     
-   // $_SESSION['id0'] = $responseArray->businesses[0]->id;
-   
-    // function selectedBusiness(){
-    //     $businessZero = "https://api.yelp.com/v3/businesses/".$_SESSION[''];
-    // }
-
+  
 
 ?>
 <!DOCTYPE html>

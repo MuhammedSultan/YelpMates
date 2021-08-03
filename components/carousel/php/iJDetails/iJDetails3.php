@@ -2,7 +2,7 @@
 
 
         
-    require('inJax.php');
+     require('../apiRequests/inJax.php');
 
   
 
@@ -11,7 +11,7 @@
 $curl = curl_init();
 
  curl_setopt_array($curl, [
- 	CURLOPT_URL => "https://api.yelp.com/v3/businesses/" . $six,
+ 	CURLOPT_URL => "https://api.yelp.com/v3/businesses/" . $three,
  	CURLOPT_RETURNTRANSFER => true,
  	CURLOPT_FOLLOWLOCATION => true,
  	CURLOPT_ENCODING => "",

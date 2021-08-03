@@ -2,7 +2,7 @@
 
 
         
-    require('inJax.php');
+      require('../apiRequests/inJax.php');
 
   
 
@@ -11,7 +11,7 @@
 $curl = curl_init();
 
  curl_setopt_array($curl, [
- 	CURLOPT_URL => "https://api.yelp.com/v3/businesses/" . $zero,
+ 	CURLOPT_URL => "https://api.yelp.com/v3/businesses/" . $seven,
  	CURLOPT_RETURNTRANSFER => true,
  	CURLOPT_FOLLOWLOCATION => true,
  	CURLOPT_ENCODING => "",
@@ -40,29 +40,4 @@ $err = curl_error($curl);
  }
 
 
- 
-
-
-
-
- 
-// get the client IP address
-$ip = $_SERVER['REMOTE_ADDR'];
-
-//create curl resource
-$ch = curl_init();
-
-//set url
-curl_setopt($ch, CURLOPT_URL, "https://api.ipgeolocation.io/ipgeo?apiKey=3e6f1707a2014ffa80067e7a1409b232&ip=".$ip);
-
-//return transfer as a string
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
-//$output contains the output string
- $output = curl_exec($ch);
-print_r($output);
- //close curl resource to free up system resources
- curl_close($ch);
- 
-
-?>
+ ?>

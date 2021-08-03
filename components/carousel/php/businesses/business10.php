@@ -4,7 +4,7 @@
 
  //   include('inJacksonville.php');
     
-   include('../apiRequests/iJDetails10.php');
+   include('../iJDetails/iJDetails10.php');
     
 
 // IMAGES
@@ -39,7 +39,7 @@ $curl = curl_init();
  	CURLOPT_TIMEOUT => 30,
  	CURLOPT_HTTPHEADER => [
  		"content-type: application/x-www-form-urlencoded",
- 		"Authorization: Bearer WWORhxdC48K1oVcYBtxSNXXuMelV6t3TMGk70q3AFVBlV9C3a7xPYQl5kPTTaPO5pXhMvDDS0HX92GDzOqgyeh4rFKM0f7Xum7zeMOOWOEbGW6H1Ciexm0A74fOvYHYx"
+ 		"Authorization: $_ENV[API_KEY]"
  	],
  ]);
 
